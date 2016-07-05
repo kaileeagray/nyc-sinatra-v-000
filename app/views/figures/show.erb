@@ -1,10 +1,9 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <tr>
-    <td><%= @landmark.name %></td>
-    <td><%= @landmark.year_completed %></td>
-  </tr>
-<table>
+<h1><%=@figure.name%></h1>
+<h3>Title(s): </h3>
+  <%@figure.titles.each do |title|%>
+    <%=title.name%> <br>
+  <%end%>
+<h3>Landmark(s): </h3>
+  <%@figure.landmarks.each do |landmark|%>
+    <%=landmark.name%> <br>
+  <%end%>
